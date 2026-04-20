@@ -22,7 +22,7 @@ public class pedido {
     private String nombreCliente;
     @NotNull(message = "Especifique cuanto es el total")
     private double total;
-    //Esta es opcional, pero es recomendable ocuparla
+    //Esta es opcional
     private String fechaPedido;
     @NotBlank(message = "Especifique el estado del pedido")
     private String estado;

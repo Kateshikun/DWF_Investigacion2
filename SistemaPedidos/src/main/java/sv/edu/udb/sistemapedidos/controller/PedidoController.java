@@ -19,10 +19,7 @@ public class PedidoController {
 
     @PostMapping
     public pedido crearPedido(@RequestBody pedido pedido) {
-        // 1. Guardar en DB
         pedido guardado = pedidoRepository.save(pedido);
-
-        // 2. Crear el evento con los campos EXACTOS de tu nueva entidad
         OrderCreatedEvent evento = new OrderCreatedEvent(
                 guardado.getId(),
                 guardado.getNombreCliente(), //
@@ -30,7 +27,6 @@ public class PedidoController {
                 guardado.getTotal()
         );
 
-        // 3. Enviar a RabbitMQ
         pedidoPublisher.enviarPedido(evento);
 
         return guardado;

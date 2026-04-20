@@ -31,11 +31,8 @@ public class RabbitConfig {
     @Bean
     public Jackson2JsonMessageConverter messageConverter() {
         Jackson2JsonMessageConverter converter = new Jackson2JsonMessageConverter();
-
-        // Esta es la parte que ya tienes y que hizo que el BUILD saliera SUCCESS
         DefaultClassMapper classMapper = new DefaultClassMapper();
         classMapper.setTrustedPackages("*");
-
         converter.setClassMapper(classMapper);
         return converter;
     }
