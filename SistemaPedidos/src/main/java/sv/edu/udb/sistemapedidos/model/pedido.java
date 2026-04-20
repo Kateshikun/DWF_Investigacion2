@@ -1,4 +1,4 @@
-package sv.edu.udb.model;
+package sv.edu.udb.sistemapedidos.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

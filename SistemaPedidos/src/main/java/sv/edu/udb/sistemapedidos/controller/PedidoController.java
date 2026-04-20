@@ -3,7 +3,7 @@ package sv.edu.udb.sistemapedidos.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import sv.edu.udb.sistemapedidos.dto.OrderCreatedEvent;
-import sv.edu.udb.model.pedido;
+import sv.edu.udb.sistemapedidos.model.pedido;
 import sv.edu.udb.sistemapedidos.publisher.PedidoPublisher;
 import sv.edu.udb.sistemapedidos.repository.PedidoRepository;
 
